@@ -35,8 +35,8 @@
 
 <body>
 
-    <nav class="black-text indigo lighten-2 nav-wrapper" role="navigation">
-        <div class="container black-text">
+    <nav class="black-text indigo lighten-2 nav-wrapper no-pad-bot" role="navigation">
+        <div class="container black-text no-pad-bot">
             <a id="logo-container" href="#" class="brand-logo"><img src="./img/logo.png" width="64px" height="64px"></a>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
@@ -58,10 +58,10 @@
 
     <main>
         <div class="section no-pad-bot blue-background">
-            <div class="container">
+            <div class="container no-pad-bot">
                 <br>
                 <h1 class="header center white-text">IVTimer - Gestor de tiempo </h1>
-                <div class="row center">
+                <div class="row center ">
                     <p class="white-text">Aplicación web que permite <strong>gestionar el tiempo</strong> de diferentes
                         perfiles universitarios</p>
                 </div>
@@ -70,18 +70,21 @@
         </div>
         <div class="indigo lighten-4">
             <div class="container">
-                <h2>Introducción</h2>
-                <p>IVTimer es un modelo de gestión óptima del tiempo, creado con el objetivo de beneficiar en este
-                    aspecto a los distintos perfiles de la universidad,
-                    mejorando su rendimiento y productividad. Para ello, hemos hecho uso de una serie de metodologías de
-                    diseño centrado en el usuario, cubriendo sus necesidades
-                    de la mejor manera posible.
-                </p>
-                <p>El proyecto se encuentra actualmente en fase beta, por lo que es posible que algunas funciones no se
-                    encuentren disponibles en este momento. Sin embargo, estamos
-                    actualizándonos constantemente, por lo que encontrarás todo tipo de mejoras con frecuencia.
-                </p>
-                <br><br>
+                <div class="section indigo lighten-4">
+                    <h2 class="center"><i>Introducción</i></h2>
+                    <div class="row">
+                        <p>IVTimer es un modelo de gestión óptima del tiempo, creado con el objetivo de beneficiar en este
+                            aspecto a los distintos perfiles de la universidad,
+                            mejorando su rendimiento y productividad. Para ello, hemos hecho uso de una serie de metodologías de
+                            diseño centrado en el usuario, cubriendo sus necesidades
+                            de la mejor manera posible.
+                        </p>
+                        <p>El proyecto se encuentra actualmente en fase beta, por lo que es posible que algunas funciones no se
+                            encuentren disponibles en este momento. Sin embargo, estamos
+                            actualizándonos constantemente, por lo que encontrarás todo tipo de mejoras con frecuencia.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="indigo lighten-5">
@@ -155,7 +158,7 @@
                 <p>Además, es posible crear eventos compartidos, con los que podrás notificar a algún correo electrónico
                     del evento, y se guardará también en su calendario si así lo acepta.</p>
                 <p>También podrás crear horarios aislados, para rutinas o cualquier cosa. Siguen un formato similar al
-                    siguiente:</p>
+                    siguiente:</p> 
                 <table class="striped">
                     <thead>
                         <tr>
@@ -197,29 +200,18 @@
                 </table>
             </div>
             <br><br>
+            <p align="center"><a class="waves-effect waves-light btn-large" role="button" href="pages/schedule.html"><i class="material-icons left">cloud</i>¡Pruébalo!</a></p>
+            <br><br>
         </div>
-        <div class="intro-tarjeta container center">
-            <h2>Tarjeta de nombre</h2>
-            <p>Esta sección corresponde al ejercicio 2 de la práctica. En la tarjeta aparecerá el texto que introduzca
-                desde teclado al pulsar el botón de cambiar.</p>
-        </div>
-        <div class="card-container" id="card">
-            <div class="card">
-                <div class="front">
-                    <p id="texto-usuario">Aquí irá tu texto</p>
-                </div>
+        <div class="register indigo lighten-4">
+            <div class="container">
+                <br>
+                <h2 class="center"><i>¿Te interesa el proyecto?</i></h2>
+                <br/>
+                <p align="center"><a class="waves-effect waves-light btn-large" role="button" href="singup.html"><i class="material-icons left">star</i>REGÍSTRATE AQUÍ!</a></p>
+                <br><br>
             </div>
         </div>
-        <div class="container center">
-            <input type="text" name="nuevotexto" id="texto-input" value="Introduce tu nombre">
-            <br><br>
-            <button class="btn waves-effect waves-light center" id="boton-cambio-texto" type="submit"
-                name="action">Cambiar
-                <i class="material-icons right">send</i>
-            </button>
-            <br><br><br>
-        </div>
-
     </main>
     <footer class="page-footer indigo lighten-2">
         <div class="container">
