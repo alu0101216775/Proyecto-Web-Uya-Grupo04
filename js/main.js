@@ -1,24 +1,21 @@
 //$(".button-collapse").sideNav();
 
-document.getElementById('addTaskForm').addEventListener('submit', saveTask);
-document.getElementById('resetButton').addEventListener('click', resetTable);
-document.getElementById('resetButton').addEventListener('onkeypress', resetTable);
 printTasks();
-function initializeTable(e) {
+function initializeTable() {
     if(localStorage.getItem('taskList') === null) {
         let taskList = [["07:00 - 08:00", " ", " ", " ", " ", " "], ["08:00 - 09:00", " ", " ", " ", " ", " "], ["09:00 - 10:00", " ", " ", " ", " ", " "], ["10:00 - 11:00", " ", " ", " ", " ", " "], ["11:00 - 12:00", " ", " ", " ", " ", " "], ["12:00 - 13:00", " ", " ", " ", " ", " "], ["13:00 - 14:00", " ", " ", " ", " ", " "]];
         localStorage.setItem('taskList', JSON.stringify(taskList));
     }
 }
 
-function resetTable(e) {
+function resetTable() {
     let taskList = [["07:00 - 08:00", " ", " ", " ", " ", " "], ["08:00 - 09:00", " ", " ", " ", " ", " "], ["09:00 - 10:00", " ", " ", " ", " ", " "], ["10:00 - 11:00", " ", " ", " ", " ", " "], ["11:00 - 12:00", " ", " ", " ", " ", " "], ["12:00 - 13:00", " ", " ", " ", " ", " "], ["13:00 - 14:00", " ", " ", " ", " ", " "]];
     localStorage.setItem('taskList', JSON.stringify(taskList));
     printTasks();
 }
 
-function saveTask(e) {
-    console.log("called");
+function saveTask() {
+    //console.log("called");
     initializeTable();
     let taskTitle = document.getElementById('taskTitle').value;
     let taskDay  = document.getElementById('taskDay').value;
@@ -28,12 +25,12 @@ function saveTask(e) {
         day: taskDay,
         hour: taskHour
     }
-    console.log(task);
+    //console.log(task);
     let taskList = JSON.parse(localStorage.getItem('taskList'));
     taskList[task.hour][task.day] = task.title;
     localStorage.setItem('taskList', JSON.stringify(taskList));
     printTasks();
-    e.preventDefault();
+   // e.preventDefault();
 }
 
 function printTasks() {

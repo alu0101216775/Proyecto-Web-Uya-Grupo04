@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="es">
         <head>
             <meta charset="UTF-8">
             <meta lang="es">
@@ -36,7 +36,7 @@
             <header>
                 <nav class="black-text indigo lighten-2 nav-wrapper no-pad-bot" role="navigation">
                     <div class="container black-text no-pad-bot">
-                        <a id="logo-container" href="#" class="brand-logo"><img src="../img/logo.png" width="64px" height="64px"></a>
+                        <a id="logo-container" href="/" class="brand-logo"><img src="../img/logo.png" width="64px" height="64px"></a>
                         <a href="#" data-target="nav-mobile" class="sidenav-trigger">
                             <i class="material-icons">menu</i>
                         </a>
@@ -63,29 +63,31 @@
                     <div class="row card-panel">
                     
                         <article class="col s6 offset-s3">
-                            <form method="POST" action="formulario-contacto.php">
+                            <form action="">
                                 <div class="input-field">
                                     <i class="material-icons prefix">perm_identity</i>
+                                    
+                                    <input type="text" name="nombre" class="validate" required>
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" name="nombre" required>
                                 </div>
 
                                 <div class="input-field">
                                     <i class="material-icons prefix">email</i>
+                                    
+                                    <input type="email" name="email" class="validate" required>
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" required>
                                 </div>
             
                                 <div class="input-field">
                                     <i class="material-icons prefix">person_pin</i>
                                     <label for="motivo">Motivo</label>
-                                    <input type="text" name="motivo" required>
+                                    <input type="text" name="motivo" class="validate" required>
                                 </div>
                                 
                                 <div class="input-field">
                                     <i class="material-icons prefix">mode_edit</i>
                                     <label for="mensaje">Mensaje</label>
-                                    <textarea name="mensaje" id="" rows="10" class="materialize-textarea"  length="140" required></textarea>
+                                    <textarea name="mensaje" id="" rows="10" class="materialize-textarea validate"  length="140" required></textarea>
                                 </div>
                                 <br><br>
                                 <p class="center-align">
