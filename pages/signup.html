@@ -13,13 +13,13 @@
             <link type="text/css" rel="stylesheet" href="../css/tarjeta.css" media="screen,projection" />
             <!--JavaScript at end of body for optimized loading-->
             <script type="text/javascript" src="../js/materialize.min.js"></script>
-        
+
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     M.AutoInit();
                 });
             </script>
-        
+
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <style>
                 body {
@@ -27,6 +27,7 @@
                     min-height: 100vh;
                     flex-direction: column;
                 }
+
                 main {
                     flex: 1 0 auto;
                 }
@@ -61,11 +62,21 @@
                         <div class="center">
                             <div class="row">
                                 <br>
-                                <h1>Inicio de sesión</h1>
+                                <h1>Registro de usuario</h1>
                                 <br>
                             </div>
                             
-                        <div class="row card-panel">
+                            <div class="row card-panel">
+                            <div class="row">
+                                <div class="col s12 m4"> </div>
+                                <div class="col s12 m4 input-field">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input type="text" name="nuevonombre" id="nombre-input" placeholder="Nombre y Apellidos" class="validate" data-length="20">
+                                    <label for="nombre-input">Nombre y Apellidos</label>
+                                </div>
+                                <br><br>
+                            </div>
+
                             <div class="row">
                                 <div class="col s12 m4"> </div>
                                 <div class="col s12 m4 input-field">
@@ -84,16 +95,34 @@
                                     <label for="telef-input">Contraseña</label>
                                 </div>
                             </div>
-               
-                            <p><label><input type="checkbox"/><span>Recordar contraseña</span></label></p>
-                            <button class="btn waves-effect waves-light center" id="boton-carga-texto" type="submit" name="action">Iniciar sesión</button>
-                            <p>¿No tienes cuenta? <a href="./signup.html"> Regístrate</a></p>
+   
+                            <div class="row">
+                                <div class="col s12 m4"> </div>
+                                <div class="col s12 m4 input-field">
+                                    <i class="material-icons prefix">perm_contact_calendar</i>
+                                    <input type="date" class="datepicker" name="fecha" id="birthdate-input">
+                                    <label for="age-input">Fecha de nacimiento</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s12 m4"> </div>
+                                <div class="col s12 m4 input-field">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input type="number" name="telef" id="telef-input" placeholder="666555444" class="validate" data-length="9">
+                                    <label for="telef-input">Numero de teléfono</label>
+                                </div>
+                            </div>                            
+                            <br><br>
+                            <button class="btn waves-effect waves-light center" id="boton-carga-texto" type="submit" name="action">Registrarse
+                                <i class="material-icons right">person_add</i>
+                            </button>
+                            <p>¿Ya tienes cuenta? <a href="./signin.html"> Inicia sesión</a></p>
                         </div>
                     </div>
                     <br>
                     </div>
                 </div>
-                
             </main>
             <footer class="page-footer indigo lighten-2">
                 <div class="container">
@@ -101,15 +130,6 @@
                 </div>
                 <br>
             </footer>
-
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
-            <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
-
-            <!-- TODO: Add SDKs for Firebase products that you want to use
-                https://firebase.google.com/docs/web/setup#available-libraries -->
-            <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
-
-            <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
         </body>
 
     </html>
